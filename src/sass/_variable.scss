@@ -1,0 +1,17 @@
+$colorPrimary: #f2b807;
+$colorSecond: #f28f16;
+$colorThird: #f5db13;
+$colorDanger: #d93e30;
+$colorDanger-1: #732119;
+$colorDanger-2: #b33327;
+$colorWhite: #f6f7f9;
+$colorDark: #212121;
+$colorGreen: #73d677;
+$yellowGradient: linear-gradient(180deg, $colorThird 0%, $colorPrimary 100%);
+$redGradientCard: linear-gradient(
+    180deg,
+    $colorDanger-1 42.19%,
+    $colorDanger 100%
+);
+$redGradient: linear-gradient(270deg, $colorDanger-2 0.15%, $colorDanger 100%);
+$headerHeight: 9rem;

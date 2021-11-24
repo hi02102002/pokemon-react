@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Karla', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+body {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.grass,
+.bug {
+    background-color: #70a83b;
+}
+
+.fire,
+.fighting,
+.dragon {
+    background-color: #fd7d24;
+}
+
+.stile,
+.dark,
+.rock {
+    background-color: #a1a1a1;
+}
+
+.ice,
+.water {
+    background-color: #a2cff0;
+}
+
+.normal,
+.gosth {
+    background-color: #76aadb;
+}
+
+.poison,
+.psychic,
+.fairy,
+.ghost {
+    background-color: #a974bc;
+}
+
+.ground {
+    background-color: #9b897b;
+}
+
+.flying {
+    background-color: #3dc7ef;
+}
+
+.electric {
+    background-color: #f7c545;
+}
+
+.steel {
+    background-color: #9eb7b8;
+}
+
+.hp {
+    background-color: rgb(255, 89, 89);
+}
+
+.attack {
+    background-color: rgb(245, 172, 120);
+}
+
+.defense {
+    background-color: rgb(250, 224, 120);
+}
+
+.special-attack {
+    background-color: rgb(157, 183, 245);
+}
+
+.special-defense {
+    background-color: rgb(167, 219, 141);
+}
+
+.speed {
+    background-color: rgb(250, 146, 178);
+}

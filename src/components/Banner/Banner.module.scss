@@ -1,0 +1,79 @@
+@use '../../sass/mixin' as *;
+@use '../../sass/variable' as *;
+.banner {
+  background-image: $yellowGradient;
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  padding: 6rem 0;
+  @include useFlexbox(center, center, null, null);
+
+  @media screen and (max-width: 1023px) and (orientation: landscape) {
+    height: unset;
+  }
+
+  .container {
+    @include useFlexbox(center, null, null, null);
+    margin-left: auto;
+
+    @media screen and (max-width: 1023px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .content {
+    max-width: 51.5rem;
+    transition: all 0.4s;
+
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      max-width: unset;
+      text-align: center;
+      @include useFlexbox(center, null, null, column);
+    }
+  }
+
+  .title {
+    line-height: 8.4rem;
+    letter-spacing: 0.4rem;
+    color: $colorDark;
+    margin-bottom: 6.4rem;
+
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 0.6rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 4.2rem;
+      line-height: 4.9rem;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .text {
+    font-size: 3.2rem;
+    line-height: 3.7rem;
+    color: $colorDark;
+    margin-bottom: 6.4rem;
+
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 3.2rem;
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  .img {
+    position: relative;
+    width: 100%;
+
+    transition: all 0.4s;
+
+    img {
+      transition: all 0.4s;
+    }
+  }
+}

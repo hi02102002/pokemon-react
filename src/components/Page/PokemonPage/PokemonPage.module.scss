@@ -1,0 +1,134 @@
+@use '../../../sass/mixin' as *;
+@use '../../../sass/variable' as *;
+
+.pokemonPage {
+  margin: 6rem 0;
+}
+
+.loading {
+  @include centerUseAbsolute('both');
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  @include useFlexbox(center, space-between, null, null);
+
+  padding: 2rem;
+  border-radius: 1.1rem;
+  background-color: rgb(192, 190, 190);
+  margin-bottom: 2rem;
+  border: 1px solid gray;
+
+  .id {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+}
+
+.types {
+  @include useFlexbox(center, null, null, null);
+  margin-left: -0.5rem;
+  .type {
+    display: block;
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.1rem;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+}
+
+.content {
+  @include useFlexbox(center, null, null, null);
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  .img {
+    width: 100%;
+    max-width: 30%;
+    flex: 0 0 30%;
+    padding: 0 2rem;
+    @include useFlexbox(center, center, null, null);
+
+    @media screen and (max-width: 767px) {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .name {
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: $colorDark;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  .desc {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $colorDark;
+    margin-bottom: 4rem;
+  }
+}
+
+.progressContainer {
+  overflow: hidden;
+
+  .progressBar {
+    height: 2rem;
+    position: relative;
+    color: $colorDark;
+    margin-bottom: 1rem;
+    border-radius: 0 1.1rem 1.1rem 0;
+  }
+}
+
+.profile {
+  --col: 2;
+  --gap: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  overflow: hidden;
+  background-color: #30a7d7;
+  padding: 2rem;
+  border-radius: 1.1rem;
+  & > div {
+    width: calc(100% / var(--col) - var(--gap));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & > span:first-child {
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > span:first-child {
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use '../../sass/variable' as *;
+@use '../../sass/mixin' as *;
+
+.button {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    color: $colorDark;
+    background-color: $colorGreen;
+    min-width: 23rem;
+    min-height: 6.6rem;
+    font-size: 2.3rem;
+    line-height: 2.7rem;
+    border-radius: 1.1rem;
+    font-weight: 500;
+    @include useFlexbox(center, center, null, null);
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+        background-color: rgba($colorGreen, $alpha: 0.9);
+    }
+    &:active {
+        transform: translateY(4px);
+        background-color: rgba($colorGreen, $alpha: 0.9);
+    }
+}

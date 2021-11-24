@@ -1,0 +1,25 @@
+@use '../../sass/mixin' as *;
+.pokedex-list {
+    --col: 5;
+    --gap: 1.5rem;
+    transition: all 0.4s;
+    @include useFlexbox(null, null, wrap, null);
+    gap: var(--gap);
+    margin-right: calc(-1 * var(--gap));
+
+    @media screen and (max-width: 1023px) {
+        --col: 3;
+    }
+
+    @media screen and (max-width: 767px) {
+        --col: 2;
+    }
+
+    @media screen and (max-width: 510px) {
+        --col: 1;
+    }
+
+    li {
+        width: calc(100% / var(--col) - var(--gap));
+    }
+}
